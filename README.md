@@ -2,6 +2,11 @@
 Settings and tests for Spinnaker on PyNN
 
 ## Installation
+A python3.8 installation is required:
+
+```
+sudo apt install python3.8 python3.8-dev python3.8-tk
+```
 
 To install with pipenv (higly recommended) run:
 
