@@ -55,6 +55,8 @@ for directory in dirs:
     os.system("pip install .")
     os.chdir("..")
 print("[blue]Installation complete[/blue]")
+
+# Setup for Pynn to work on spinnaker simulator
 print("[green]Setting up pyNN for spinnaker[\green]")
 try:
     os.system("python -m spynnaker.pyNN.setup_pynn")
