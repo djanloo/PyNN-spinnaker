@@ -1,5 +1,0 @@
-# Installation spinnaker pynn
-http://spinnakermanchester.github.io/spynnaker/6.0.0/PyNNOnSpinnakerInstall.html
-
-# Virtual mode
-http://spinnakermanchester.github.io/common_pages/6.0.0/VirtualMode.html
