@@ -4,8 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-neuron = "*"
 tk = "*"
+matplotlib = "*"
+rich = "*"
+hbp-neuromorphic-platform = "*"
+ebrains-drive = "*"
 
 [dev-packages]
 
