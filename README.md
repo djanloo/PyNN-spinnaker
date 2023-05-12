@@ -11,6 +11,16 @@ pipenv shell
 python build_from_source.py
 ```
 
+In case python alias is not set run `python3 build_from_source.py` instead of the last line.
+
+## Send to server
+
+To send on spinnaker:
+
+- insert in `send.py` your EBRAINS username, password & collab id
+- run `python send.py`
+- wait :)
+
 ## Description
 
 - `build_from_source.py` downloads latest version of used repos and installs them
