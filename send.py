@@ -1,14 +1,17 @@
 """Sends "simulation.py" to spinnaker server, then retrieves the job results.
+
+It is a revisitation of the script given in form of jupyter notebook in EBRAINS spinnaker lab.
 """
 import nmpi
 from rich import print
 
-# Replace None with your username and password
+# Replace None with your username, password and collab_id
 username = None 
-password = None 
+password = None
+collab_id = None
 
-if username is None or password is None:
-    print("[red]username and password not set yet[/red]")
+if username is None or password is None or collab_id is None:
+    print("[red]username/password/collab_id not set yet[/red]")
     exit()
 
 client = nmpi.Client(
@@ -20,9 +23,6 @@ print("It may be necessary to grant access visiting this URL by browser [blue]on
 
 import os 
 import time
-
-# Replace with your collab id
-collab_id = "nmc-test-djanloo"
 
 print("Using the repository ",collab_id," for quotas. Starting the job at",time.ctime())
 job = client.submit_job(source='simulation.py',
