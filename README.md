@@ -50,3 +50,21 @@ and not
 `python -m spynnaker8.setup_pynn`
 
 as explained in the installation guide.
+
+### connection from config file (?)
+
+As it seems to be stated [here](https://groups.google.com/g/spinnakerusers/c/ySTiD4WCktU), the execution of code on Manchester's machine is recommended through the _batch submission system_. I am not completely sure of the impossibility to run just simply with a remote configuration:
+
+
+```
+[Machine]
+
+machineName = _name_
+version = _v_
+
+spalloc_server = spinnaker.cs.man.ac.uk
+spalloc_port = 22244
+spalloc_user = _user_
+```
+
+even if I continue to get [SpinnmanIOException](https://spinnman.readthedocs.io/en/latest/spinnman/?highlight=ioexception#spinnman.exceptions.SpinnmanIOException).
