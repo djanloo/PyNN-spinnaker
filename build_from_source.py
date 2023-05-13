@@ -1,6 +1,6 @@
 """Builds from repos for sPyNNaker (cuurrent version is 1!6.0.1 at 12/05/23).
 
-Basically follow the instructions at:
+Basically follows the instructions at:
 
 http://spinnakermanchester.github.io/spynnaker/6.0.0/PyNNOnSpinnakerInstall.html
 
@@ -54,6 +54,7 @@ for directory in dirs:
     os.chdir(directory)
     os.system("pip install .")
     os.chdir("..")
+    
 print("[blue]Installation complete[/blue]")
 
 # Setup for Pynn to work on spinnaker simulator
@@ -63,5 +64,13 @@ try:
 except Exception as e:
     print("[red]Something went wrong[/red]")
     print(e)
+    exit()
 else:
     print("[green]Done[/green]")
+
+# Cleaning
+print("[blue]Cleaning..[/blue]")
+for directory in dirs:
+    print(f"removing {directory}")
+    os.system(f"rm {directory} -R -f")
+print("[green]Done[/green]")

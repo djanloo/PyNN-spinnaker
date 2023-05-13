@@ -4,11 +4,19 @@ It is a revisitation of the script given in form of jupyter notebook in EBRAINS 
 """
 import nmpi
 from rich import print
+import argparse
+
+parser = argparse.ArgumentParser(description='Sends a file to spinnaker')
+parser.add_argument('file', action='store', type=str, help='The script to send')
+
+args = parser.parse_args()
+FILE = args.file
+print(f"executing [green]{FILE}[/green] remotely")
 
 # Replace None with your username, password and collab_id
-username = None 
-password = None
-collab_id = None
+username = None#"djanloo"
+password = None#"ebra_in_758"
+collab_id = None#"nmc-test-djanloo"
 
 if username is None or password is None or collab_id is None:
     print("[red]username/password/collab_id not set yet[/red]")
@@ -24,8 +32,8 @@ print("It may be necessary to grant access visiting this URL by browser [blue]on
 import os 
 import time
 
-print("Using the repository ",collab_id," for quotas. Starting the job at",time.ctime())
-job = client.submit_job(source='simulation.py',
+print(f"Using the repository [green] {collab_id} [/green] for quotas. Starting the job at {time.ctime()}")
+job = client.submit_job(source=FILE,
                         platform=nmpi.SPINNAKER,
                         collab_id=collab_id,
                         command="run.py",

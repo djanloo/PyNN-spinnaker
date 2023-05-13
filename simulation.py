@@ -11,7 +11,7 @@ from pyNN.utility.plotting import plot_spiketrains
 import pyNN.spiNNaker as sim
 from time import perf_counter
 
-simulation_time = 100
+simulation_time = 10
 excitatory_strength = 0.05
 inhibitory_strength = 1.0
 connection_probability = 0.05

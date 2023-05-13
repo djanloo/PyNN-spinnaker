@@ -23,7 +23,7 @@ In case python alias is not set run `python3 build_from_source.py` instead of th
 To send on spinnaker:
 
 - insert in `send.py` your EBRAINS username, password & collab id
-- run `python send.py`
+- run `python send.py <file>`
 - wait :)
 
 ## Description
